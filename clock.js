@@ -37,3 +37,5 @@ clock.style.fontColor = 'white'
 navbar.style.margin='200px 25%'
 navbar.style.position = 'relative'
 navbar.style.fontSize = '5em'
+navbar.style.decoration = 'none';
+// navbar.style.border = '2px solid'
