@@ -3,6 +3,7 @@ var setTime;
 var body = document.getElementsByTagName('body')[0]
 var clock = document.getElementById('clock')
 var color;
+var navbar = document.getElementById('navbar')
 function startTime(){
 var today = new Date();
 var h = today.getHours();
@@ -31,3 +32,8 @@ window.addEventListener('load', start)
 // body.style.backgroundColor = '#' + color
 clock.style.margin = '20% 30%';
 clock.style.fontSize = '10em';
+clock.style.fontColor = 'white'
+
+navbar.style.margin='200px 25%'
+navbar.style.position = 'relative'
+navbar.style.fontSize = '5em'

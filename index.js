@@ -8,15 +8,20 @@ var input = document.createElement('input')
 var text = document.createElement('div')
 var enter = document.createElement('button')
 var article = document.createElement('div')
-
+var home = document.getElementById('home')
+var clock = document.getElementById('clock')
+var p1 = document.createElement('div')
+var heading = document.getElementById('heading')
 function popup(){
   modal.style.height = '750px';
   modal.style.width = '75%';
-  modal.style.margin = '200px';
+  modal.style.margin= '15%';
+  modal.style.marginLeft = '15%'
   modal.style.backgroundColor = 'lightblue';
   modal.style.backgroundImage = 'none'
+  modal.style.zIndex = '3'
   modal.style.position = 'absolute';
-  modal.style.opacity = '.9'
+  modal.style.opacity = '.7'
   document.body.appendChild(modal)
 
   button.style.height = '25px';
@@ -29,7 +34,28 @@ function popup(){
   // button.style.marginTop = '0px';
   modal.appendChild(button)
 
+
+  home.style.marginLeft = '10%';
+  home.style.fontSize = '3em';
+  home.innerHTML = 'HOME';
+  home.style.background = 'none';
+  modal.appendChild(home)
+
+
+  clock.style.marginLeft = '10%';
+  clock.style.fontSize = '3em';
+  clock.innerHTML = 'CLOCK';
+  clock.style.background = 'none';
+  modal.appendChild(clock)
+
+  // navbar.style.border = '2px solid green';
+  // navbar.style.textAlign = 'center';
+  // navbar.style.backgroundColor = 'black';
+  // navbar.style.color = 'white';
+  // modal.appendChild(navbar)
+
   // text.style.position = 'relative';
+  text.style.background = 'clear';
   text.style.border = '2px solid';
   text.style.width = '50%';
   text.style.margin= '20% auto';
@@ -51,10 +77,13 @@ function popup(){
   modal.appendChild(enter)
 }
 article.style.border = '2px solid';
+article.style.zIndex = '2';
+article.style.position = 'absolute'
 article.innerHTML = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+document.body.appendChild(article)
 
 function start(){
-  setTimeout(popup,300)
+  setTimeout(popup,3000)
 }
 
 button.addEventListener('click',function(){
@@ -68,3 +97,14 @@ enter.addEventListener('click', function(){
   input.value = 'THANK YOU'
 })
 window.addEventListener('load', start)
+
+p1.style.border = '2px solid';
+p1.style.width = '50%'
+p1.style.marginTop= '25%';
+p1.style.marginLeft = '15%';
+// p1.style.opacity = '0.5';
+p1.style.background = 'none';
+p1.style.zIndex = '2';
+p1.style.position = 'absolute';
+p1.innerHTML = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+document.body.appendChild(p1)
